@@ -1,35 +1,49 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+
+import './App.css';
+import TabButton from './components/TabButton.jsx';
+import AboutMe from './components/content/AboutMe.jsx';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+  const [selectedContent, setSelectedContent] = useState(<AboutMe />)
+
+	function handleClick(clickedButton) {
+    setSelectedContent(clickedButton)
+		console.log(clickedButton);
+	}
+
+	return (
+		<>
+			<header>
+				<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+					<div className="container-fluid">
+						<a className="navbar-brand">
+							Matt Christopherson
+						</a>
+						<div className="collapse navbar-collapse" id="navbarNav">
+							<ul className="navbar-nav">
+								<TabButton click={() => handleClick(<AboutMe />)}>About Me</TabButton>
+								<TabButton click={() => handleClick('portfolio')}>Portfolio</TabButton>
+								<TabButton click={() => handleClick('contact')}>Contact</TabButton>
+								<TabButton click={() => handleClick('resume')}>Resume</TabButton>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</header>
+
+			<main>
+      {selectedContent}
+			</main>
+			<footer>
+      <p>I'm the footer!</p>
+    </footer>
+		</>
+	);
 }
 
-export default App
+export default App;
