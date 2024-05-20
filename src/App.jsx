@@ -3,16 +3,17 @@ import { useState } from 'react';
 import './App.css';
 import TabButton from './components/TabButton.jsx';
 import AboutMe from './components/content/AboutMe.jsx';
+import Portfolio from './components/content/Portfolio.jsx';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 function App() {
-
-  const [selectedContent, setSelectedContent] = useState(<AboutMe />)
+	
+	const [selectedContent, setSelectedContent] = useState(<AboutMe />);
 
 	function handleClick(clickedButton) {
-    setSelectedContent(clickedButton)
+		setSelectedContent(clickedButton);
 		console.log(clickedButton);
 	}
 
@@ -21,27 +22,43 @@ function App() {
 			<header>
 				<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
 					<div className="container-fluid">
-						<a className="navbar-brand">
-							Matt Christopherson
-						</a>
+						<a className="navbar-brand">Matt Christopherson</a>
 						<div className="collapse navbar-collapse" id="navbarNav">
 							<ul className="navbar-nav">
-								<TabButton click={() => handleClick(<AboutMe />)}>About Me</TabButton>
-								<TabButton click={() => handleClick('portfolio')}>Portfolio</TabButton>
-								<TabButton click={() => handleClick('contact')}>Contact</TabButton>
-								<TabButton click={() => handleClick('resume')}>Resume</TabButton>
+								<TabButton
+									isClicked={selectedContent === <AboutMe />}
+									click={() => handleClick(<AboutMe />)}
+								>
+									About Me
+								</TabButton>
+								<TabButton
+									isClicked={selectedContent === <Portfolio />}
+									click={() => handleClick(<Portfolio />)}
+								>
+									Portfolio
+								</TabButton>
+								<TabButton
+									isClicked={selectedContent === 'contact'}
+									click={() => handleClick('contact')}
+								>
+									Contact
+								</TabButton>
+								<TabButton
+									isClicked={selectedContent === 'resume'}
+									click={() => handleClick('resume')}
+								>
+									Resume
+								</TabButton>
 							</ul>
 						</div>
 					</div>
 				</nav>
 			</header>
 
-			<main>
-      {selectedContent}
-			</main>
+			<main>{selectedContent}</main>
 			<footer>
-      <p>I'm the footer!</p>
-    </footer>
+				<p>I'm the footer!</p>
+			</footer>
 		</>
 	);
 }
