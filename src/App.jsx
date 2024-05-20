@@ -4,6 +4,7 @@ import './App.css';
 import TabButton from './components/TabButton.jsx';
 import AboutMe from './components/content/AboutMe.jsx';
 import Portfolio from './components/content/Portfolio.jsx';
+import Contact from './components/content/Contact.jsx';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
@@ -38,8 +39,8 @@ function App() {
 									Portfolio
 								</TabButton>
 								<TabButton
-									isClicked={selectedContent === 'contact'}
-									click={() => handleClick('contact')}
+									isClicked={selectedContent === <Contact />}
+									click={() => handleClick(<Contact />)}
 								>
 									Contact
 								</TabButton>
