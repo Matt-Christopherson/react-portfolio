@@ -1,14 +1,30 @@
 #root {
+  font-family: "Spline Sans Mono", monospace;
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
 
-.portfolio-item {
-  width: 350px;
-  height: 350px;
-  object-fit: cover;
+.contentcontainer {
+  margin-top: 25px;
+  background-color: #f0f0f0; 
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(33 37 41);
+  color: white;
+  text-align: center;
+}
+
+.footerimg {
+  width: 50px;
+  padding: 10px;
+  border-radius: 15px;
 }
 
 .logo {

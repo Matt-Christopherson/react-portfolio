@@ -1,0 +1,48 @@
+/* Portfolio.css */
+.portfolio-item {
+    width: 325px;
+    height: 325px;
+    object-fit: cover;
+    border: solid rgb(33 37 41);
+    margin: 2px;
+    display: block;
+  }
+  
+  .portfolio-item-wrapper {
+    position: relative;
+    width: 325px;
+    height: 325px;
+    display: inline-block;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .portfolio-item-wrapper:hover .overlay {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  #portfolio-container {
+    height: 80vh;
+  }
+  
