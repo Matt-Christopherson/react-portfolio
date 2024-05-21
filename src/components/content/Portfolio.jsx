@@ -10,7 +10,7 @@ export default function Portfolio() {
             <div className="portfolio-item-wrapper">
               <img
                 className="portfolio-item"
-                src="src/assets/weather.PNG"
+                src="src/assets/weather.png"
                 alt="Weather Dashboard"
               />
               <div className="overlay">
@@ -24,7 +24,7 @@ export default function Portfolio() {
             <div className="portfolio-item-wrapper">
               <img
                 className="portfolio-item"
-                src="src/assets/scheduler.PNG"
+                src="src/assets/scheduler.png"
                 alt="Work Day Scheduler"
               />
               <div className="overlay">
@@ -38,7 +38,7 @@ export default function Portfolio() {
             <div className="portfolio-item-wrapper">
               <img
                 className="portfolio-item"
-                src="src/assets/ecommerce.PNG"
+                src="src/assets/ecommerce.png"
                 alt="E-commerce Backend"
               />
               <div className="overlay">
@@ -54,7 +54,7 @@ export default function Portfolio() {
             <div className="portfolio-item-wrapper">
               <img
                 className="portfolio-item"
-                src="src/assets/readme.PNG"
+                src="src/assets/readme.png"
                 alt="README Generator"
               />
               <div className="overlay">
@@ -68,7 +68,7 @@ export default function Portfolio() {
             <div className="portfolio-item-wrapper">
               <img
                 className="portfolio-item"
-                src="src/assets/notes.PNG"
+                src="src/assets/notes.png"
                 alt="Note Taker"
               />
               <div className="overlay">
@@ -82,7 +82,7 @@ export default function Portfolio() {
             <div className="portfolio-item-wrapper">
               <img
                 className="portfolio-item"
-                src="src/assets/password.PNG"
+                src="src/assets/password.png"
                 alt="Random Password Generator"
               />
               <div className="overlay">
