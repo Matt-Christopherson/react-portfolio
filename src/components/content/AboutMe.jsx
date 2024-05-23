@@ -7,7 +7,7 @@ export default function AboutMe() {
 			<div className="row">
 				<div className="col">
 					<img
-						src="./src/assets/portrait.png"
+						src="/src/assets/portrait.png"
 						alt="Portrait image of Matt Christopherson"
 						width="500"
 					></img>
