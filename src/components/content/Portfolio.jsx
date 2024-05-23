@@ -11,7 +11,7 @@ export default function Portfolio() {
             <div className="portfolio-item-wrapper">
               <img
                 className="portfolio-item"
-                src="src/assets/weather.png"
+                src={assets.weather}
                 alt="Weather Dashboard"
               />
               <div className="overlay">
@@ -25,7 +25,7 @@ export default function Portfolio() {
             <div className="portfolio-item-wrapper">
               <img
                 className="portfolio-item"
-                src="src/assets/scheduler.png"
+                src={assets.scheduler}
                 alt="Work Day Scheduler"
               />
               <div className="overlay">
@@ -55,7 +55,7 @@ export default function Portfolio() {
             <div className="portfolio-item-wrapper">
               <img
                 className="portfolio-item"
-                src="src/assets/readme.png"
+                src={assets.readme}
                 alt="README Generator"
               />
               <div className="overlay">
@@ -69,7 +69,7 @@ export default function Portfolio() {
             <div className="portfolio-item-wrapper">
               <img
                 className="portfolio-item"
-                src="src/assets/notes.png"
+                src={assets.notes}
                 alt="Note Taker"
               />
               <div className="overlay">
@@ -83,7 +83,7 @@ export default function Portfolio() {
             <div className="portfolio-item-wrapper">
               <img
                 className="portfolio-item"
-                src="src/assets/password.png"
+                src={assets.password}
                 alt="Random Password Generator"
               />
               <div className="overlay">

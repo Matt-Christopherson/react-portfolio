@@ -1,29 +1,33 @@
 import './AboutMe.css';
+import assets from '../../assets.jsx';
 
 export default function AboutMe() {
 	return (
 		<div className="contentcontainer">
-			<h1>About Me</h1>
+			<h1 id="aboutme">About Me</h1>
 			<div className="row">
 				<div className="col">
 					<img
-						src="/src/assets/portrait.png"
+						id="portrait"
+						src={assets.portrait}
 						alt="Portrait image of Matt Christopherson"
 						width="500"
 					></img>
 				</div>
-				<div className="col">
+				<div className="col" id="info">
 					<h2>Education</h2>
 					<p>
-						I studied for two years at Utah State University and graduated with
-						an Associate Degree before moving on to study full stack web
-						development through an online bootcamp hosted by the University of
-						Utah.
+						I earned an Associate Degree from Utah State University after two
+						years of dedicated study. Subsequently, I advanced my education in
+						full stack web development by completing an intensive online
+						bootcamp offered by the University of Utah.
 					</p>
 					<h2>Skills</h2>
 					<p>
-						I thrive when working with groups. I find it exciting to find unique
-						solutions to difficult problems.
+						I excel in collaborative environments and enjoy tackling challenging
+						problems with innovative solutions. My strong attention to detail is
+						a point of pride, and I am highly adaptable and quick to learn new
+						skills.
 					</p>
 				</div>
 			</div>
