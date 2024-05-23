@@ -6,6 +6,7 @@ import AboutMe from './components/content/AboutMe';
 import Portfolio from './components/content/Portfolio';
 import Contact from './components/content/Contact';
 import Resume from './components/content/Resume';
+import assets from './assets';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
@@ -78,14 +79,14 @@ function App() {
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<img className="footerimg" src="src\assets\github.png" alt="github" />
+					<img className="footerimg" src={assets.github} alt="github" />
 				</a>
 				<a
 					href="https://www.linkedin.com/in/matt-christopherson27/"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<img className="footerimg" src="src\assets\linkedin.png" alt="linkedin" />
+					<img className="footerimg" src={assets.linkedin} alt="linkedin" />
 				</a>
 			</footer>
 		</>
