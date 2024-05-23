@@ -1,4 +1,5 @@
 import './Portfolio.css';
+import assets from '../../assets.jsx';
 
 export default function Portfolio() {
   return (
@@ -38,7 +39,7 @@ export default function Portfolio() {
             <div className="portfolio-item-wrapper">
               <img
                 className="portfolio-item"
-                src="src/assets/ecommerce.png"
+                src={assets.ecommerce}
                 alt="E-commerce Backend"
               />
               <div className="overlay">
