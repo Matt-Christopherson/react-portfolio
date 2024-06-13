@@ -3,8 +3,8 @@ h1{
 }
 
 .portfolio-item {
-	width: 325px;
-	height: 325px;
+	width: 300px;
+	height: 300px;
 	object-fit: cover;
 	border: solid rgb(33 37 41);
 	margin: 2px;
@@ -46,5 +46,5 @@ h1{
 }
 
 #portfolio-container {
-	height: 82vh;
+	height: 80vh !important;
 }

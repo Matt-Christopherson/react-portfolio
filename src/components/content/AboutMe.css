@@ -1,9 +1,9 @@
-h1 {
-    margin-bottom: 50px !important;
+.contentcontainer {
+    height: 70vh !important;
 }
 
-.contentcontainer {
-    height: 65vh;
+#aboutme {
+    margin-bottom: 50px !important;
 }
 
 #portrait {

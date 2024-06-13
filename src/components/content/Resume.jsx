@@ -1,15 +1,15 @@
-import resumePDF from '../../assets/matt-christopherson-resume.pdf';
+import resumePDF from '../../assets/Resume.pdf';
 import './Resume.css';
 
 export default function Resume() {
 	const proficiencies = [
-		'JavaScript',
+		'JavaScript ES6+',
 		'React',
 		'Node.js',
 		'Express.js',
 		'MongoDB',
-		'HTML',
-		'CSS',
+		'HTML5',
+		'CSS3',
 		'Git',
 		'Bootstrap',
 	];
@@ -20,7 +20,7 @@ export default function Resume() {
 			<p>
 				<button
 					onClick={() => window.open(resumePDF, '_blank')}
-					download="Matt_Christopherson_Resume.pdf"
+					download="Resume.pdf"
 				>
 					Download My Resume
 				</button>

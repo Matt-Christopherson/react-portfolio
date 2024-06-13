@@ -79,15 +79,15 @@ export default function Portfolio() {
           </a>
         </div>
         <div className="col">
-          <a href="https://matt-christopherson.github.io/matts-marvelous-password-generator/">
+          <a href="https://picture-chat.onrender.com/">
             <div className="portfolio-item-wrapper">
               <img
                 className="portfolio-item"
-                src={assets.password}
+                src={assets.picture}
                 alt="Random Password Generator"
               />
               <div className="overlay">
-                <div className="text">Random Password Generator</div>
+                <div className="text">Picture Chat</div>
               </div>
             </div>
           </a>

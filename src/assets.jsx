@@ -7,6 +7,7 @@ import portrait from './assets/portrait.png'
 import readme from './assets/readme.png'
 import scheduler from './assets/scheduler.png'
 import weather from './assets/weather.png'
+import picture from './assets/picture.png'
 
 const assets = {
     ecommerce,
@@ -17,7 +18,8 @@ const assets = {
     portrait,
     readme,
     scheduler,
-    weather
+    weather,
+    picture,
 }
 
 export default assets;
