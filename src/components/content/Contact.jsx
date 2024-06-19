@@ -1,13 +1,11 @@
-// WHEN I am presented with the Contact section
-// THEN I see a contact form with fields for a name, an email address, and a message
-// WHEN I move my cursor out of one of the form fields without entering text
-// THEN I receive a notification that this field is required
-// WHEN I enter text into the email address field
-// THEN I receive a notification if I have entered an invalid email address
+import React from 'react';
 import { useForm } from 'react-hook-form';
 import './Contact.css';
+import { useState } from 'react';
 
-export default function Contact() {
+export default function ContactForm() {
+	const [emailSent, isEmailSent] = useState(false);
+
 	const {
 		register,
 		handleSubmit,
@@ -16,28 +14,74 @@ export default function Contact() {
 	} = useForm();
 
 	const onSubmit = (data) => {
-		console.log(data);
+		const url = 'http://localhost:5000/send-email';
+		const emailData = {
+			from: {
+				email: 'mailtrap@demomailtrap.com',
+				name: data.name,
+			},
+			to: [
+				{
+					email: 'matthew.christopherson27@gmail.com',
+				},
+			],
+			subject: `Portfolio message from ${data.email}`,
+			text: data.feedback,
+			category: 'Integration Test',
+		};
+
+		fetch(url, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(emailData),
+		})
+			.then(async (response) => {
+				if (!response.ok) {
+					const text = await response.text();
+					throw new Error(text);
+				}
+				return response.json();
+			})
+			.then((data) => {
+				console.log('Email successfully sent!', data);
+				isEmailSent(true);
+			})
+			.catch((error) => {
+				console.error('Error:', error.message || error);
+				isEmailSent(false);
+			});
 	};
 
 	return (
-		<div className="contentcontainer" id='contact-container'>
+		<div className="contentcontainer" id="contact-container">
 			<h1>Contact</h1>
-			<form onSubmit={handleSubmit(onSubmit)}>
-				<div className='contact-item'>
-					<p><label htmlFor="name">Name:</label></p>
+			<form className="test-mailing" onSubmit={handleSubmit(onSubmit)}>
+				<div className="contact-item">
+					<textarea
+						id="feedback"
+						name="feedback"
+						placeholder="Enter your message here"
+						{...register('feedback', { required: 'Message is required' })}
+						onBlur={() => trigger('feedback')}
+						style={{ width: '100%', height: '150px' }}
+					/>
+				</div>
+				<div className="contact-item">
 					<input
-						id="name"
 						type="text"
+						name="name"
+						placeholder="Your name"
 						{...register('name', { required: 'Name is required' })}
 						onBlur={() => trigger('name')}
 					/>
 				</div>
-
-				<div className='contact-item'>
-					<p><label htmlFor="email">Email:</label></p>
+				<div className="contact-item">
 					<input
-						id="email"
 						type="email"
+						name="email"
+						placeholder="Your email"
 						{...register('email', {
 							required: 'Email is required',
 							pattern: {
@@ -47,26 +91,14 @@ export default function Contact() {
 						})}
 						onBlur={() => trigger('email')}
 					/>
-					
 				</div>
-
-				<div className='contact-item'>
-					<p><label htmlFor="message">Message:</label></p>
-					<textarea
-						id="message"
-						{...register('message', { required: 'Message is required' })}
-						onBlur={() => trigger('message')}
-					/>
-					
-				</div>
-
-				<div>
-				<p>{errors.name && <span>{errors.name.message}</span>}</p>
-				<p>{errors.email && <span>{errors.email.message}</span>}</p>
-				<p>{errors.message && <span>{errors.message.message}</span>}</p>
-				</div>
-
-				<button type="submit">Submit</button>
+				{errors.feedback && <span className='message'>{errors.feedback.message}</span>}
+				{errors.name && <span className='message'>{errors.name.message}</span>}
+				{errors.email && <span className='message'>{errors.email.message}</span>}
+				<button type="submit">
+					Submit
+				</button>
+				{emailSent && <span className='message' id='email-message'>Email successfully sent!</span>}
 			</form>
 		</div>
 	);
