@@ -1,5 +1,6 @@
 import './AboutMe.css';
-import assets from '../../assets.jsx';
+// import assets from '../../assets.jsx';
+import portrait from '../../../dist/assets/portrait-DRfGovt1.png'
 
 export default function AboutMe() {
 	return (
@@ -9,7 +10,7 @@ export default function AboutMe() {
 				<div className="col">
 					<img
 						id="portrait"
-						src={assets.portrait}
+						src={portrait}
 						alt="Portrait image of Matt Christopherson"
 						width="500"
 					></img>
