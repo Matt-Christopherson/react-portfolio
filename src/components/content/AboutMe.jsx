@@ -2,6 +2,17 @@ import './AboutMe.css';
 import assets from '../../assets';
 
 export default function AboutMe() {
+	const proficiencies = [
+		'JavaScript ES6+',
+		'React',
+		'Node.js',
+		'Express.js',
+		'MongoDB',
+		'HTML5',
+		'CSS3',
+		'Git',
+		'Bootstrap',
+	];
 	return (
 		<div className="contentcontainer">
 			<h1 id="aboutme">About Me</h1>
@@ -29,6 +40,12 @@ export default function AboutMe() {
 						a point of pride, and I am highly adaptable and quick to learn new
 						skills.
 					</p>
+					<h2>Proficiencies</h2>
+					<ul>
+						{proficiencies.map((skill, index) => (
+							<li key={index}>{skill}</li>
+						))}
+					</ul>
 				</div>
 			</div>
 		</div>
