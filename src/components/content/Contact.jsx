@@ -99,7 +99,9 @@ export default function ContactForm() {
 				{errors.email && (
 					<span className="message">{errors.email.message}</span>
 				)}
-				<button type="submit">Submit</button>
+				<button type="submit" style={{ cursor: 'pointer' }}>
+					Submit
+				</button>
 				{emailSent && (
 					<span className="message" id="email-message">
 						Email successfully sent!
