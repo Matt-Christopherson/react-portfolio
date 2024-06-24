@@ -92,13 +92,19 @@ export default function ContactForm() {
 						onBlur={() => trigger('email')}
 					/>
 				</div>
-				{errors.feedback && <span className='message'>{errors.feedback.message}</span>}
-				{errors.name && <span className='message'>{errors.name.message}</span>}
-				{errors.email && <span className='message'>{errors.email.message}</span>}
-				<button type="submit">
-					Submit
-				</button>
-				{emailSent && <span className='message' id='email-message'>Email successfully sent!</span>}
+				{errors.feedback && (
+					<span className="message">{errors.feedback.message}</span>
+				)}
+				{errors.name && <span className="message">{errors.name.message}</span>}
+				{errors.email && (
+					<span className="message">{errors.email.message}</span>
+				)}
+				<button type="submit">Submit</button>
+				{emailSent && (
+					<span className="message" id="email-message">
+						Email successfully sent!
+					</span>
+				)}
 			</form>
 		</div>
 	);
