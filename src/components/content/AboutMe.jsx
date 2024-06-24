@@ -4,13 +4,13 @@ import assets from '../../assets';
 export default function AboutMe() {
 	const proficiencies = [
 		'JavaScript ES6+',
-		'React',
-		'Node.js',
-		'Express.js',
-		'MongoDB',
+		'ReactJS',
 		'HTML5',
 		'CSS3',
 		'Git',
+		'Node.js',
+		'Express.js',
+		'MongoDB',
 		'Bootstrap',
 	];
 	return (
