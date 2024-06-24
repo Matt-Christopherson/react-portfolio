@@ -1,15 +1,36 @@
 .contentcontainer {
-    height: 70vh !important;
-}
-
-#aboutme {
-    margin-bottom: 50px !important;
-}
-
-#portrait {
+    height: auto;
+    padding: 1rem;
+  }
+  
+  #aboutme {
+    margin-bottom: 30px !important;
+  }
+  
+  #portrait {
     border: solid rgb(33 37 41);
-}
-
-#info {
-    margin-right: 30px;
-}
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+  
+  #info {
+    margin-right: 0;
+    text-align: left;
+    padding: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .contentcontainer {
+      padding: 0.5rem;
+    }
+  
+    #aboutme {
+      margin-bottom: 20px;
+    }
+  
+    #info {
+      padding: 0.5rem;
+    }
+  }
+  

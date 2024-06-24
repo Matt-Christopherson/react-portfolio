@@ -1,20 +1,20 @@
 import './AboutMe.css';
-import assets from '../../assets.jsx';
+import assets from '../../assets';
 
 export default function AboutMe() {
 	return (
 		<div className="contentcontainer">
 			<h1 id="aboutme">About Me</h1>
 			<div className="row">
-				<div className="col">
+				<div className="col-12 col-md-6">
 					<img
 						id="portrait"
 						src={assets.portrait}
 						alt="Portrait image of Matt Christopherson"
 						width="500"
-					></img>
+					/>
 				</div>
-				<div className="col" id="info">
+				<div className="col-12 col-md-6" id="info">
 					<h2>Education</h2>
 					<p>
 						I earned an Associate Degree from Utah State University after two

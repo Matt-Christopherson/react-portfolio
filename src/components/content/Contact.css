@@ -1,29 +1,42 @@
 #contact-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	height: 65vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  padding: 1rem;
 }
 
 form {
-	display: flex;
-	flex-direction: column;
-	align-items: fle;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  max-width: 600px;
 }
 
 .contact-item {
-	margin-bottom: 1em;
+  margin-bottom: 1em;
+  width: 100%;
 }
 
 button {
-	margin-top: 1em;
+  margin-top: 1em;
 }
 
 .message {
   padding-bottom: 1em;
 }
 
-#email-message{
+#email-message {
   padding-top: 1em;
+}
+
+@media (max-width: 768px) {
+  #contact-container {
+    padding: 0.5rem;
+  }
+
+  form {
+    width: 90%;
+  }
 }

@@ -3,5 +3,23 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 65vh;
-}
+    height: auto;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .contentcontainer {
+      padding: 0.5rem;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    button {
+      padding: 0.5em 1em;
+      font-size: 0.9em;
+    }
+  }
+  
