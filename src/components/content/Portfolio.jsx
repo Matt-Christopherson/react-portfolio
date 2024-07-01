@@ -3,8 +3,9 @@ import assets from '../../assets.jsx';
 
 export default function Portfolio() {
 	return (
-		<div className="container-xxl contentcontainer" id="portfolio-container">
-			<h1>Portfolio</h1>
+		<div className="contentcontainer">
+			<h1>My Portfolio</h1>
+			<h3>Welcome to my website! Check out my recent projects below.</h3>
 			<div className="row">
 				<div className="col">
 					<div className="portfolio-item-wrapper">

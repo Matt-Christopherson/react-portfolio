@@ -38,7 +38,8 @@ export default function AboutMe() {
 						I excel in collaborative environments and enjoy tackling challenging
 						problems with innovative solutions. My strong attention to detail is
 						a point of pride, and I am highly adaptable and quick to learn new
-						skills.
+						skills. I work primarily with JavaScript, HTML, and CSS to build my
+						sites, but I'm currently learning C#.
 					</p>
 					<h2>Proficiencies</h2>
 					<ul>
