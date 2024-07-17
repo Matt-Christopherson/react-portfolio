@@ -3,7 +3,7 @@ import './App.css';
 import TabButton from './components/TabButton';
 import AboutMe from './components/content/AboutMe';
 import Portfolio from './components/content/Portfolio';
-// import Contact from './components/content/Contact';
+import Contact from './components/content/Contact';
 import Resume from './components/content/Resume';
 import assets from './assets';
 import Carousel from 'react-bootstrap/Carousel';
@@ -49,12 +49,12 @@ function App() {
 								>
 									About Me
 								</TabButton>
-{/* 								<TabButton
+								<TabButton
 									isClicked={index === 2}
 									click={() => handleSelect(2)}
 								>
 									Contact
-								</TabButton> */}
+								</TabButton>
 								<TabButton
 									isClicked={index === 2}
 									click={() => handleSelect(3)}
@@ -101,11 +101,11 @@ function App() {
 						<AboutMe />
 					</div>
 				</Carousel.Item>
-{/* 				<Carousel.Item>
+ 				<Carousel.Item>
 					<div className="contentcontainer">
 						<Contact />
 					</div>
-				</Carousel.Item> */}
+				</Carousel.Item>
 				<Carousel.Item>
 					<div className="contentcontainer">
 						<Resume />
